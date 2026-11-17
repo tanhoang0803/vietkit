@@ -1,5 +1,7 @@
 # vietkit
 
+**English** | [Tiếng Việt](./README.vi.md)
+
 **Zero-dependency TypeScript toolkit for Vietnamese apps.**
 Bộ công cụ TypeScript không phụ thuộc cho các ứng dụng Việt Nam: đọc số thành chữ, định dạng tiền, bỏ dấu, số điện thoại, mã số thuế, âm lịch.
 
