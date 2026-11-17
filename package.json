@@ -1,0 +1,66 @@
+{
+  "name": "vietkit",
+  "version": "0.1.0",
+  "description": "Zero-dependency TypeScript toolkit for Vietnamese apps: number-to-words, VND formatting, diacritics & slugs, phone numbers, tax code (MST) validation and lunar calendar.",
+  "keywords": [
+    "vietnam",
+    "vietnamese",
+    "tieng-viet",
+    "doc-so",
+    "number-to-words",
+    "vnd",
+    "slug",
+    "diacritics",
+    "phone",
+    "mst",
+    "tax-code",
+    "lunar-calendar",
+    "am-lich",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "TanQHoang (https://github.com/tanhoang0803)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanhoang0803/vietkit.git"
+  },
+  "homepage": "https://github.com/tanhoang0803/vietkit#readme",
+  "bugs": {
+    "url": "https://github.com/tanhoang0803/vietkit/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
