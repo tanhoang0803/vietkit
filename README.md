@@ -29,7 +29,7 @@ solarToLunar(17, 2, 2026);      // { day: 1, month: 1, year: 2026, leap: false }
 ## Install
 
 ```bash
-npm install github:tanhoang0803/vietkit
+npm install vietkit
 ```
 
 ## API
